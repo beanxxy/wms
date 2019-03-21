@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UFT-8">
+    <title>wms</title>
+    <link rel="stylesheet" href="http://unpkg.com/iview/dist/styles/iview.css">
+    <script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
+    <script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js></script>
+</head>
+
+<body>
+<div id="app">
+    <i-button @click="show">Click me!</i-button>
+    <Modal v-model="visible" title="Welcome">
+        Welcom to view
+    </Modal>
+</div>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            visible:false
+        },
+        methods:{
+            show:function(){
+                this.visible=ture;
+            }
+        }
+     })
+</script>
+</body>
+</html>
