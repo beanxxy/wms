@@ -1,1 +1,3 @@
-/root/wms/src/main/java/Application.java
+/root/wms/src/main/java/wms/Application.java
+/root/wms/src/main/java/wms/app/user/User.java
+/root/wms/src/main/java/wms/app/user/UserMapper.java

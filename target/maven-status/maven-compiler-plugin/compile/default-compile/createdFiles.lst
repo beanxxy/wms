@@ -1,1 +1,4 @@
+wms/app/user/User.class
+wms/app/User/UserController.class
 wms/Application.class
+wms/app/user/UserMapper.class
