@@ -8,6 +8,8 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.Map;
 
+import com.google.gson.Gson;
+
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -63,6 +65,8 @@ public class FreemarkerUtil {
      * @param root
      */
     public String getString(String name, Map<String, Object> root) {
+    	Gson gs=new Gson();
+    	root	=	gs.fromJson(gs.toJson(root), Map.class);
         try {
         	StringWriter stringWriter = new StringWriter();
         	BufferedWriter writer = new BufferedWriter(stringWriter);
