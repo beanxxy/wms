@@ -18,29 +18,55 @@
   	<div class="off-canvas-content">
     	<div class="docs-content" id="content">
       	<div class="container">
-        <h3 class="s-title">用户管理</h3>
+        <h3 class="s-title">保单</h3>
         <button class="btn">添加</button>
         <table class="table table-striped table-hover">
 		  <thead>
 		    <tr>
 		      <th>序号</th>
-		      <th>账号</th>
-		      <th>密码</th>
+		      <th>投保人</th>
+		      <th>被投保人</th>
+		      <th>保额</th>
 		      <th>操作</th>
 		    </tr>
 		  </thead>
 		  <tbody>
-		  	<#list users! as user>
+		  	<#list bills! as bill>
 			    <tr >
-			      <td>${user.id}</td>
-			      <td class="text-justify">${user.name}</td>
-			      <td>*****</td>
-			      <td><button class="btn">修改</button> <button class="btn btn-error">删除</button></td>
+			      <td>${bill.id!}</td>
+			      <td>${bill.plicyholder!}</td>
+			      <td>${bill.insured!}</td> 
+			      <td>${bill.amount!}</td>			      
+			      <td><button class="btn">打印</button> <button class="btn">修改</button> <button class="btn btn-error">删除</button></td>
 			    </tr>
 		    </#list>
 		  </tbody>
 		</table>
-         
+		
+         <ul class="pagination">
+			  <li class="page-item disabled">
+			    <a href="#" tabindex="-1">Previous</a>
+			  </li>
+			  <li class="page-item active">
+			    <a href="#">1</a>
+			  </li>
+			  <li class="page-item">
+			    <a href="#">2</a>
+			  </li>
+			  <li class="page-item">
+			    <a href="#">3</a>
+			  </li>
+			  <li class="page-item">
+			    <span>...</span>
+			  </li>
+			  <li class="page-item">
+			    <a href="#">12</a>
+			  </li>
+			  <li class="page-item">
+			    <a href="#">Next</a>
+			  </li>
+		 </ul>
+		
      	</div>
     	</div>
 	</div>
