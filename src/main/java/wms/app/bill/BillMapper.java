@@ -12,4 +12,6 @@ public interface BillMapper{
 	List<Bill> all();
 	@Select("SELECT * FROM sys_bill LIMIT #{start},#{length}")
 	List<Bill> page(@Param("start") int start,@Param("length") int length);
+	@Select("SELECT COUNT(*) FROM sys_bill")
+	int count();
 }

@@ -42,28 +42,21 @@
 		    </#list>
 		  </tbody>
 		</table>
-		
          <ul class="pagination">
-			  <li class="page-item disabled">
-			    <a href="#" tabindex="-1">Previous</a>
+         	  <li class="page-item  <#if page==1>disabled</#if>">
+			    <a href="./bill?p=${1}&s=${s!5}">首页</a>
 			  </li>
-			  <li class="page-item active">
-			    <a href="#">1</a>
+			  <li class="page-item <#if page==1>disabled</#if>">
+			    <a href="./bill?p=${page-1}&s=${s!5}" tabindex="-1">上一页</a>
+			  </li> 
+		 	  <li class="page-item  ">
+		 	  	   <a href="#">${page!}/${count!}</a>
+			  </li>  
+			  <li class="page-item  <#if page==count>disabled</#if>">
+			    <a href="./bill?p=${page+1}&s=${s!5}">下一页</a>
 			  </li>
-			  <li class="page-item">
-			    <a href="#">2</a>
-			  </li>
-			  <li class="page-item">
-			    <a href="#">3</a>
-			  </li>
-			  <li class="page-item">
-			    <span>...</span>
-			  </li>
-			  <li class="page-item">
-			    <a href="#">12</a>
-			  </li>
-			  <li class="page-item">
-			    <a href="#">Next</a>
+			   <li class="page-item <#if page==count>disabled</#if>">
+			    <a href="./bill?p=${count}&s=${s!5}">尾页</a>
 			  </li>
 		 </ul>
 		
