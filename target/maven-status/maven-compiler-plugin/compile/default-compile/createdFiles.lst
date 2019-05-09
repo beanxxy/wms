@@ -1,5 +1,5 @@
 wms\freemarker\Cfg_freemarkerUtil.class
-wms\app\User\UserMapper.class
-wms\app\User\UserController.class
-wms\app\User\User.class
+wms\app\user\UserController.class
 wms\freemarker\FreemarkerUtil.class
+wms\app\user\User.class
+wms\app\user\UserMapper.class
