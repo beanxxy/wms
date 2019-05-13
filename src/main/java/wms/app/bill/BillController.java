@@ -25,7 +25,7 @@ public class BillController {
 	FreemarkerUtil freemarkerUtil;
 	@GetMapping
     public Object get(@PathParam("p")String p,@PathParam("s")String s){
-		int pagesize =3;
+		int pagesize =5;
 		int pi=1;
 		if(p==null) {
 			p="1";
